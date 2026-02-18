@@ -43,15 +43,16 @@ export function sendOtp(email, navigate) {
 }
 
 export function signUp(
-  accountType,
   firstName,
   lastName,
   email,
   password,
   confirmPassword,
+  accountType,
   otp,
   navigate
-) {
+)
+{
   return async (dispatch) => {
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))

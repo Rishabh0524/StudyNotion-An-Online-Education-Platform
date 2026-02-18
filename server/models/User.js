@@ -59,9 +59,11 @@ const userSchema = new mongoose.Schema(
 			type: Date,
 		},
 		image: {
-			type: String,
-			required: true,
-		},
+  type: String,
+  required: false,
+  default: `https://api.dicebear.com/5.x/initials/svg?seed=User`,
+},
+
 		courseProgress: [
 			{
 				type: mongoose.Schema.Types.ObjectId,
